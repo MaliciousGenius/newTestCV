@@ -7,14 +7,11 @@ LABEL version="0.1" \
 
 RUN apk --update --no-cache add git
 
-RUN echo $PATH
+ADD . $GOPATH/src
 
-RUN mkdir -p /opt/app
-ADD . /opt/app/
-WORKDIR /opt/app
 RUN go get && \
     go generate && \
-    go build -o main .
+    go build -o $GOPATH/bin/main $GOPATH/src/main.go
 
 EXPOSE 8000
-ENTRYPOINT ["/opt/app/main"]
+ENTRYPOINT ["main"]
