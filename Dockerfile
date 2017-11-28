@@ -8,7 +8,7 @@ LABEL version="0.1" \
 RUN mkdir -p /opt/app
 ADD . /opt/app/
 WORKDIR /opt/app
-RUN go get && \
+RUN go generate && \
     go build -o main .
 
 EXPOSE 8000
