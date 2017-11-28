@@ -8,7 +8,8 @@ LABEL version="0.1" \
 RUN mkdir -p /opt/app
 ADD . /opt/app/
 WORKDIR /opt/app
-RUN go build -o main .
+RUN go get && \
+    go build -o main .
 
 EXPOSE 8000
 ENTRYPOINT ["/opt/app/main"]
