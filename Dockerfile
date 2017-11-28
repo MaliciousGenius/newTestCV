@@ -5,8 +5,10 @@ MAINTAINER Dmitriy Detkov <maliciousgenius@gmail.com>
 LABEL version="0.1" \
       description="web-stream-cv"
 
-RUN apt update && \\
-    apt install -y --no-install-recommends libopencv-dev
+RUN apt-get update -y
+RUN apt-get upgrade -y
+RUN apt-get install -y --no-install-recommends libopencv-dev \
+    pkg-config
 
 ADD . $GOPATH/src
 
