@@ -5,7 +5,7 @@ MAINTAINER Dmitriy Detkov <maliciousgenius@gmail.com>
 LABEL version="0.1" \
       description="web-stream-cv"
 
-RUN apk --update --no-cache add git
+RUN apk --update --no-cache add build-base git
 
 ADD . $GOPATH/src
 
