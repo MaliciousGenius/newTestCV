@@ -9,8 +9,7 @@ RUN apk --update --no-cache add git
 
 ADD . $GOPATH/src
 
-RUN go get && \
-    go generate && \
+RUN go get github.com/lazywei/go-opencv && \
     go build -o $GOPATH/bin/main $GOPATH/src/main.go
 
 EXPOSE 8000
