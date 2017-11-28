@@ -1,9 +1,9 @@
 package main
 
 import (
-	"github.com/MaliciousGenius/web-stream-cv/grabber"
-	"github.com/MaliciousGenius/web-stream-cv/processing"
-	"github.com/MaliciousGenius/web-stream-cv/handlers"
+	grabber "./grabber"
+	processing "./processing"
+	handlers "./handlers"
 	"github.com/lazywei/go-opencv/opencv"
 	"image"
 	"net/http"
