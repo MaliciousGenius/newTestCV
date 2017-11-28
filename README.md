@@ -1,1 +1,1 @@
-# newTestCV
+# WebCam to Web stream (Golang, OpenCV)
